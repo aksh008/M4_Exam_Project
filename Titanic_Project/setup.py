@@ -28,7 +28,8 @@ ROOT_DIR = Path(__file__).resolve().parent
 print(ROOT_DIR)
 REQUIREMENTS_DIR = ROOT_DIR / "requirements"
 PACKAGE_DIR = ROOT_DIR / "titanic_model"
-with open(PACKAGE_DIR / "VERSION", encoding="utf-8") as f:
+version_file = PACKAGE_DIR / "VERSION"
+with open(version_file, encoding="utf-8") as f:
     _version = f.read().strip()
     about["__version__"] = _version
 
@@ -58,7 +59,7 @@ setup(
     author_email=EMAIL,
     python_requires=REQUIRES_PYTHON,
     packages=find_packages(exclude=("tests",)),
-    package_data={"regression_model": ["VERSION"]},
+    package_data={"titanic_model": ["VERSION"]},
     install_requires=list_reqs(),
     extras_require={},
     include_package_data=True,
