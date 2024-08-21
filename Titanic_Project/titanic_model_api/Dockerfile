@@ -8,10 +8,10 @@ WORKDIR /app
 COPY . /app
 
 # Copy config file
-COPY Titanic_Project/titanic_model/config.yml /usr/local/lib/python3.10/site-packages/titanic_model/config.yml
+COPY ../titanic_model/config.yml /usr/local/lib/python3.10/site-packages/titanic_model/config.yml
 
 # Copy the trained model file
-COPY Titanic_Project/titanic_model/trained_models/titanic__model_output_v0.0.1.pkl /usr/local/lib/python3.10/site-packages/titanic_model/trained_models/titanic__model_output_v0.0.1.pkl
+COPY ../titanic_model/trained_models/titanic__model_output_v0.0.1.pkl /usr/local/lib/python3.10/site-packages/titanic_model/trained_models/titanic__model_output_v0.0.1.pkl
 
 # Upgrade PIP
 RUN pip install --upgrade pip
