@@ -9,13 +9,13 @@ COPY Titanic_Project/titanic_model_api/ /app
 
 # COPY Titanic_Project/titanic_model/trained_models/titanic__model_output_v0.0.1.pkl Titanic_Project/titanic_model_api/
 # Copy the trained model file
-COPY /app/titanic__model_output_v0.0.1.pkl /usr/local/lib/python3.10/site-packages/titanic_model/trained_models/titanic__model_output_v0.0.1.pkl
+COPY Titanic_Project/titanic_model/trained_models/titanic__model_output_v0.0.1.pkl /usr/local/lib/python3.10/site-packages/titanic_model/trained_models/titanic__model_output_v0.0.1.pkl
 
 # Copy config file
 COPY Titanic_Project/titanic_model/config.yml /usr/local/lib/python3.10/site-packages/titanic_model/config.yml
 
 # Copy the trained model file
-COPY Titanic_Project/titanic_model/trained_models/titanic__model_output_v0.0.1.pkl /usr/local/lib/python3.10/site-packages/titanic_model/trained_models/titanic__model_output_v0.0.1.pkl
+# COPY Titanic_Project/titanic_model/trained_models/titanic__model_output_v0.0.1.pkl /usr/local/lib/python3.10/site-packages/titanic_model/trained_models/titanic__model_output_v0.0.1.pkl
 
 # Upgrade PIP
 RUN pip install --upgrade pip
