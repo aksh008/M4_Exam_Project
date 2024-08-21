@@ -1,5 +1,3 @@
-""" this is setup module"""
-
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
@@ -9,7 +7,7 @@ from setuptools import find_packages, setup
 
 # Package meta-data.
 NAME = "titanic_model"
-DESCRIPTION = "titanic dataset regression model package "
+DESCRIPTION = "Titanic dataset classification model package "
 EMAIL = "------"
 AUTHOR = "----------"
 REQUIRES_PYTHON = ">=3.7.0"
@@ -20,7 +18,7 @@ REQUIRES_PYTHON = ">=3.7.0"
 # Except, perhaps the License and Trove Classifiers!
 # Trove Classifiers: https://pypi.org/classifiers/
 
-LONG_DESCRIPTION = DESCRIPTION
+long_description = DESCRIPTION
 
 # Load the package's VERSION file as a dictionary.
 about = {}
@@ -28,23 +26,14 @@ ROOT_DIR = Path(__file__).resolve().parent
 print(ROOT_DIR)
 REQUIREMENTS_DIR = ROOT_DIR / "requirements"
 PACKAGE_DIR = ROOT_DIR / "titanic_model"
-version_file = PACKAGE_DIR / "VERSION"
-with open(version_file, encoding="utf-8") as f:
+with open(PACKAGE_DIR / "VERSION") as f:
     _version = f.read().strip()
     about["__version__"] = _version
 
 
 # What packages are required for this module to be executed?
 def list_reqs(fname="requirements.txt"):
-    """Reads the specified requirements file and returns a list of requirements.
-
-    Args:
-        fname (str): The name of the requirements file to read. Defaults to "requirements.txt".
-
-    Returns:
-        list: A list of requirements as strings.
-    """
-    with open(REQUIREMENTS_DIR / fname, encoding="utf-8") as fd:
+    with open(REQUIREMENTS_DIR / fname) as fd:
         return fd.read().splitlines()
 
 
@@ -53,13 +42,13 @@ setup(
     name=NAME,
     version=about["__version__"],
     description=DESCRIPTION,
-    long_description=LONG_DESCRIPTION,
+    long_description=long_description,
     long_description_content_type="text/markdown",
     author=AUTHOR,
     author_email=EMAIL,
     python_requires=REQUIRES_PYTHON,
     packages=find_packages(exclude=("tests",)),
-    package_data={"titanic_model": ["VERSION"]},
+    package_data={"classification_model": ["VERSION"]},
     install_requires=list_reqs(),
     extras_require={},
     include_package_data=True,
