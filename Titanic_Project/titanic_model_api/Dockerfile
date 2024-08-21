@@ -17,6 +17,9 @@ COPY Titanic_Project/titanic_model/trained_models/titanic__model_output_v0.0.1.p
 # Copy the trained model file
 # COPY Titanic_Project/titanic_model/trained_models/titanic__model_output_v0.0.1.pkl /usr/local/lib/python3.10/site-packages/titanic_model/trained_models/titanic__model_output_v0.0.1.pkl
 
+# copy the wheel file
+COPY Titanic_Project/titanic_model_api/titanic_model-0.0.1-py3-none-any.whl /app/Titanic_Project/titanic_model_api/titanic_model-0.0.1-py3-none-any.whl
+
 # Upgrade PIP
 RUN pip install --upgrade pip
 
