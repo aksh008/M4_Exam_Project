@@ -172,6 +172,6 @@ __pycache__/
 *.zip
 
 # Exclude trained model files
-*.pkl
+
 *.h5
 *.model
