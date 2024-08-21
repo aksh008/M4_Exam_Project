@@ -14,8 +14,6 @@ COPY Titanic_Project/titanic_model/config.yml /usr/local/lib/python3.10/site-pac
 # Copy the trained model file
 COPY Titanic_Project/titanic_model/trained_models/titanic__model_output_v0.0.1.pkl /usr/local/lib/python3.10/site-packages/titanic_model/trained_models/titanic__model_output_v0.0.1.pkl
 
-
-
 # Copy the trained model file
 # COPY Titanic_Project/titanic_model/trained_models/titanic__model_output_v0.0.1.pkl /usr/local/lib/python3.10/site-packages/titanic_model/trained_models/titanic__model_output_v0.0.1.pkl
 
