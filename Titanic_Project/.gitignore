@@ -167,7 +167,7 @@ __pycache__/
 *.pyo
 
 # Exclude distributable files
-*.whl
+
 *.tar.gz
 *.zip
 
