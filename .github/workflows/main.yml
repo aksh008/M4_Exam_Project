@@ -69,6 +69,10 @@ jobs:
         name: my-build-package
         path: Titanic_Project/dist/titanic_model-0.0.1-py3-none-any.whl
         retention-days: 1
+    - name: copy pkl
+      run: |
+        cp Titanic_Project/titanic_model/trained_models/titanic__model_output_v0.0.1.pkl Titanic_Project/titanic_model_api/
+        
 
   push-image:
     needs: [train, test, build]
