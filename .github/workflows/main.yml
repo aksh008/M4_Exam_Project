@@ -67,7 +67,7 @@ jobs:
     - uses: actions/upload-artifact@v2
       with:
         name: my-build-package
-        path: Titanic_Project/dist*.whl
+        path: Titanic_Project/dist/titanic_model-0.0.1-py3-none-any.whl
         retention-days: 1
 
   push-image:
