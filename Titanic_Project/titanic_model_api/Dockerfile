@@ -21,7 +21,7 @@ COPY Titanic_Project/titanic_model/trained_models/titanic__model_output_v0.0.1.p
 RUN pip install --upgrade pip
 
 # Install the model from the .whl file
-RUN pip install /workspaces/M4_Exam_Project/Titanic_Project/dist/titanic_model-0.0.1-py3-none-any.whl
+RUN pip install Titanic_Project/dist/titanic_model-0.0.1-py3-none-any.whl
 
 # Install the dependencies
 RUN pip install -r /app/requirements.txt
